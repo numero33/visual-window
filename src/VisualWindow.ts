@@ -15,6 +15,7 @@ export interface VisualWindowProps<T> {
 export interface VisualWindowChildProps<T = unknown> {
     index: number
     data: Array<T>
+    item: T
     style: React.CSSProperties
 }
 
@@ -127,6 +128,7 @@ export default function VisualWindow<T>({
                 createElement<VisualWindowChildProps<T>>(children, {
                     index: i,
                     data: itemData,
+                    item: itemData[i],
                     style: {
                         width: '100%',
                         height: detectHeight ? 'auto' : defaultItemHeight,
