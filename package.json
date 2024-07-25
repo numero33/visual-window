@@ -33,10 +33,10 @@
         "start": "tsc --watch",
         "build": "tsc",
         "test": "jest --passWithNoTests",
-        "test:coverage": "yarn run test --coverage",
+        "test:coverage": "pnpm run test --coverage",
         "coverage:report": "open coverage/lcov-report/index.html",
         "lint": "eslint src/",
-        "prepare": "yarn build",
+        "prepare": "pnpm build",
         "size": "size-limit",
         "analyze": "size-limit --why"
     },
@@ -45,7 +45,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn lint"
+            "pre-commit": "pnpm lint"
         }
     },
     "size-limit": [
